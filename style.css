@@ -1,0 +1,227 @@
+html, body {
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      width: 100%;
+      height: 100vh;
+      font-family: Helvetica;
+      background: rgb(0, 0, 0);
+}
+
+.left-col {
+      position: absolute;
+      width: 70%;
+      height: 100%;
+}
+
+.right-col {
+      position: absolute;
+      width: 30%;
+      height: 100%;
+}
+.left-col {
+      background: #000000;
+}
+
+.right-col {
+      left: 70%;
+}
+
+.upper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: black;
+      opacity: 0;
+      animation: appear-text 0.0001s linear forwards;
+      animation-delay: 3s;
+}
+
+.bottom {
+      position: absolute;
+      top: 50%;
+      height: 50vh;
+      width: 100%;
+      background: rgb(255, 255, 255);
+      background-size: cover;
+      opacity: 0;
+}
+
+@media(max-width: 900px) {
+      .left-col {
+            width: 100%;
+      }
+      .right-col {
+            top: 100%;
+            left: 0%;
+            width: 100%;
+      }
+
+}
+
+.logo {
+      font-family: Poppins;
+      color: rgb(105, 104, 104);
+      position: fixed;
+      margin: 1.4em;
+      font-weight: bolder;
+      z-index: 1;
+}
+
+.cover {
+      position: absolute;
+      top: 50%;
+      left: 66%;
+      transform: translate(-50%, -50%);
+      width: 65%;
+      height: 70%;
+      background: url(img/blackredsupra.jpg) no-repeat 50% 50%;
+      background-size: cover;
+      opacity: 0;
+      animation: appear-text 0.0001s linear forwards;
+      animation-delay: 0s;
+}
+
+.data {
+      position: absolute;
+      top: 36%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      font-family: Poppins;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+}
+
+#name {
+      font-weight: bolder;
+}
+
+
+.spec {
+      position: absolute;
+      top: 40%;
+      left: 26%;
+      transform: translate(-50%, -50%);
+}
+
+.spec h1 {
+      font-weight: bolder;
+      color: #ffffff;
+      font-family: Poppins;
+      text-transform: uppercase;
+}
+
+.spec p {
+      color: rgb(255, 255, 255);
+      font-family: Poppins;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 10px;
+      cursor: pointer;
+}
+
+.spec span:hover {
+      text-decoration: underline;
+}
+
+.next {
+      position: absolute;
+      top: 24%;
+      left: 16%;
+}
+
+.data2 {
+      position: absolute;
+      top: 12%;
+      left: 28%;
+      color: #ffffff;
+      font-family: Poppins;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+}
+
+
+.block-cover {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 45%;
+      height: 50%;
+}
+
+.block-cover::after {
+     content: '';
+     top: 0;
+     left: 0;
+     position: absolute;
+     width: 0%;
+     height: 100%;
+     background: #ffffff;
+}
+
+@keyframes rev-block {
+
+     0% {
+          left: 0;
+          width: 0%;
+     }
+     50% {
+          left: 0;
+          width: 100%;
+     }
+     100% {
+          left: 100%;
+          width: 0%;
+     }
+
+}
+
+@keyframes appear-text {
+
+     0% {
+          opacity: 0;
+     }
+     100% {
+          opacity: 1;
+     }
+
+}
+
+.upper-block {
+      position: absolute;
+      width: 100%;
+      height: 50vh;
+}
+
+.upper-block::after {
+     content: '';
+     top: 0;
+     left: 0;
+     position: absolute;
+     width: 0%;
+     height: 100%;
+     background: #ffffff;
+     animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+     animation-delay: 2.4s;
+}
+
+.block-bottom {
+      position: absolute;
+      top: 50%;
+      height: 50vh;
+      width: 100%;
+}
+
+.block-bottom::after {
+     content: '';
+     top: 0;
+     left: 0;
+     position: absolute;
+     width: 0%;
+     height: 100%;
+     background: #000;
+     animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+     animation-delay: 3.6s;
+}
